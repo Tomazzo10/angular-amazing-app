@@ -1,5 +1,10 @@
-<div>
-  <ul *ngFor="let item of items$ | async">
-    <h5>{{ item.title }}</h5>
-  </ul>
-</div>
+<ng-container *ngFor="let item of items$ | async">
+  <div class="item">
+    <ul class="__container">
+      <h3>{{ item.title }}</h3>
+      <img class="item-image" [src]="item.images" />
+      <h5>{{ item.description }}</h5>
+      <h5>{{ item.price }}</h5>
+    </ul>
+  </div>
+</ng-container>
