@@ -1,1 +1,5 @@
-<p>item-card works!</p>
+<div>
+  <ul *ngFor="let item of items$ | async">
+    <h5>{{ item.title }}</h5>
+  </ul>
+</div>
