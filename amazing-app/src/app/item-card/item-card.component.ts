@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable, startWith } from 'rxjs';
+import { BehaviorSubject, Observable, startWith } from 'rxjs';
 import { Item } from '../model/item';
 import { ItemsService } from '../services/items.service';
 
@@ -9,8 +9,12 @@ import { ItemsService } from '../services/items.service';
   styleUrls: ['./item-card.component.scss'],
 })
 export class ItemCardComponent implements OnInit {
+  private titleSubject: BehaviorSubject<Item[]> = new BehaviorSubject<Item[]>(
+    []
+  );
+
   @Input()
-  items$: Observable<Item[]> = [];
+  public items$: Observable<Item[]> = this.titleSubject.asObservable();
 
   constructor(private itemsService: ItemsService) {}
 
