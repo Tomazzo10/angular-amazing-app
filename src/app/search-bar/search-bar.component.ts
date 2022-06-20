@@ -1,5 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { FormControl, FormGroup } from "@angular/forms";
+import { Item } from "../model/item";
 
 import { searchFormGroup } from "../model/searchFormGroup";
 
@@ -13,11 +14,20 @@ export class SearchBarComponent implements OnInit {
     search: new FormControl<string>("", { nonNullable: true }),
   });
 
+  @Input()
+  items: Item[] = [];
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  onSubmit() {}
+  onSubmit(value: string) {
+    this.items.filter(
+      item =>
+        item.title.toLowerCase().includes(value) ||
+        item.description.toLowerCase().includes(value)
+    );
+  }
 
   resetForm() {
     this.searchForm.reset();

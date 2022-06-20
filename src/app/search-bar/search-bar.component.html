@@ -1,6 +1,14 @@
 <ng-container>
-  <form (ngSubmit)="onSubmit()" [formGroup]="searchForm">
-    <input type="text" />
+  <form
+    #form="ngForm"
+    (ngSubmit)="onSubmit(form.value.toLowerCase())"
+    [formGroup]="searchForm"
+  >
+    <input
+      name="search"
+      type="text"
+      placeholder="Search in our amazing collection of items"
+    />
     <button (click)="resetForm()">Pop!</button>
   </form>
 </ng-container>
