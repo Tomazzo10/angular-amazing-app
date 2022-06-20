@@ -14,6 +14,7 @@ export class ItemsService {
   loadAllItems(): Observable<Item[]> {
     return this.http
       .get<{ items: Item[] }>(
+        // TO-DO: change this url to wallapop's beta one
         'https://frontend-tech-test-data.s3-eu-west-1.amazonaws.com/items.json'
       )
       .pipe(map((res) => res.items));
