@@ -8,6 +8,8 @@ import { ItemCardComponent } from "./item-card/item-card.component";
 import { SearchBarComponent } from "./search-bar/search-bar.component";
 import { ItemsListComponent } from "./items-list/items-list.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { FavoriteButtonComponent } from './favorite-button/favorite-button.component';
+import { FavoriteModalComponent } from './favorite-modal/favorite-modal.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     ItemCardComponent,
     SearchBarComponent,
     ItemsListComponent,
+    FavoriteButtonComponent,
+    FavoriteModalComponent,
   ],
   imports: [
     BrowserModule,
