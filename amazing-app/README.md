@@ -2,9 +2,10 @@
 
 An amazing app, now with Angular.
 
-# AmazingApp
+## About the project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+Project developed with Angular, RxJs and Typescript.
+The purpose of this project is to apply the knowledge acquired with Angular's courses.
 
 ## Development server
 
