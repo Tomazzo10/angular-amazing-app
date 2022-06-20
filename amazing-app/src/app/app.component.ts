@@ -9,16 +9,7 @@ import { ItemsService } from './services/items.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  items$!: Observable<Item[]>;
-
   constructor(private itemsService: ItemsService) {}
 
-  ngOnInit() {
-    this.reloadItems();
-  }
-
-  reloadItems() {
-    this.items$ = this.itemsService.loadAllItems();
-    console.log(this.items$);
-  }
+  ngOnInit() {}
 }
