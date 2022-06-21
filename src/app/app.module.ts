@@ -10,6 +10,7 @@ import { ItemsListComponent } from "./items-list/items-list.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { FavoriteButtonComponent } from './favorite-button/favorite-button.component';
 import { FavoriteModalComponent } from './favorite-modal/favorite-modal.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FavoriteModalComponent } from './favorite-modal/favorite-modal.componen
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
