@@ -10,9 +10,11 @@ import { ItemsListComponent } from "./items-list/items-list.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { FavoriteButtonComponent } from "./favorite-button/favorite-button.component";
 import { FavoriteModalComponent } from "./favorite-modal/favorite-modal.component";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { FavoriteItemComponent } from "./favorite-item/favorite-item.component";
+import { FavoriteItemListComponent } from "./favorite-item-list/favorite-item-list.component";
 import { FavoriteSearchComponent } from "./favorite-search/favorite-search.component";
+
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { FavoriteSearchComponent } from "./favorite-search/favorite-search.compo
     ItemsListComponent,
     FavoriteButtonComponent,
     FavoriteModalComponent,
-    FavoriteItemComponent,
+    FavoriteItemListComponent,
     FavoriteSearchComponent,
   ],
   imports: [
@@ -31,6 +33,7 @@ import { FavoriteSearchComponent } from "./favorite-search/favorite-search.compo
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
