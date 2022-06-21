@@ -1,10 +1,10 @@
 <ng-container>
   <form
-    #form="ngForm"
-    (ngSubmit)="onSubmit(form.value.toLowerCase())"
+    (ngSubmit)="onSubmit(searchInput.value.toLowerCase())"
     [formGroup]="searchForm"
   >
     <input
+      #searchInput
       name="search"
       type="text"
       placeholder="Search in our amazing collection of items"
