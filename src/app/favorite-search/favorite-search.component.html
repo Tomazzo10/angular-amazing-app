@@ -1,0 +1,14 @@
+<ng-container>
+  <h2>Search all favorites</h2>
+  <form
+    (ngSubmit)="onFavSubmit(favSearchInput.value.toLowerCase())"
+    [formGroup]="favSearchForm"
+  >
+    <input
+      #favSearchInput
+      placeholder="Search your favorite items"
+      autocomplete="off"
+    />
+    <button (click)="resetFavForm()">Search</button>
+  </form>
+</ng-container>
