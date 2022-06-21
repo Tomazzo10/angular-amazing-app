@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 
 import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
+import { Item } from "../model/item";
 
 @Component({
   selector: "app-favorite-modal",
@@ -9,6 +10,9 @@ import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
 })
 export class FavoriteModalComponent implements OnInit {
   closeResult: string = "";
+
+  @Input()
+  favItems: Item[] = [];
 
   constructor(private modalService: NgbModal) {}
 
