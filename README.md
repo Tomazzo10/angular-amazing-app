@@ -7,7 +7,7 @@ An amazing app, now with Angular.
 Project developed with Angular, RxJs and Typescript.
 The purpose of this project is to apply the knowledge acquired with Angular's courses.
 
-## Foldering
+## Fold structure
 
 ### root
 <pre>
