@@ -34,7 +34,7 @@ The purpose of this project is to apply the knowledge acquired with Angular's co
 |-- services  
 app.*.*  
 
-<pre/>
+</pre>
 
 ## Development server
 
