@@ -25,12 +25,14 @@ The purpose of this project is to apply the knowledge acquired with Angular's co
 
 |-- favorites  
     |-- favorites-modal  
-    |-- favorites-item-list  
-    |-- favorite-search-bar  
+        |-- favorites-item-list  
+        |-- favorite-search-bar  
     |-- favorites.*.*  
 |-- home
     |-- header
+        |-- price-filter
         |-- search-bar
+        |-- sort
         |-- header.*.*
     |-- items-list  
         |-- item-card  
