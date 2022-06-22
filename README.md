@@ -27,7 +27,6 @@ The purpose of this project is to apply the knowledge acquired with Angular's co
     |-- favorites-modal  
         |-- favorites-item-list  
         |-- favorite-search-bar  
-    |-- favorites.*.*  
 |-- home
     |-- header
         |-- price-filter
