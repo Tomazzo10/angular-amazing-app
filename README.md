@@ -15,8 +15,12 @@ The purpose of this project is to apply the knowledge acquired with Angular's co
     |-- app  
     |-- assets  
     |-- stories  
+    
+</pre>
    
 ### app
+
+<pre>
 
 |-- api  
 |-- favorites  
