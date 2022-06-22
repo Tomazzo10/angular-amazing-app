@@ -10,7 +10,7 @@ The purpose of this project is to apply the knowledge acquired with Angular's co
 ## Foldering
 
 ### root
-
+<pre>
 |-- src  
     |-- app  
     |-- assets  
@@ -33,6 +33,8 @@ The purpose of this project is to apply the knowledge acquired with Angular's co
     |-- item-detail  
 |-- services  
 app.*.*  
+
+<pre/>
 
 ## Development server
 
