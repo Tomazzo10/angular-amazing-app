@@ -14,7 +14,6 @@ import { FavoriteItemListComponent } from "./favorite-item-list/favorite-item-li
 import { FavoriteSearchComponent } from "./favorite-search/favorite-search.component";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { MatCardModule } from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -33,7 +32,6 @@ import { MatCardModule } from "@angular/material/card";
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
-    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
