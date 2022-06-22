@@ -13,7 +13,8 @@ The purpose of this project is to apply the knowledge acquired with Angular's co
 <pre>
 |-- src  
     |-- app  
-    |-- assets  
+    |-- assets
+    |-- environments
     |-- stories  
     
 </pre>
@@ -22,14 +23,15 @@ The purpose of this project is to apply the knowledge acquired with Angular's co
 
 <pre>
 
-|-- api  
 |-- favorites  
     |-- favorites-modal  
     |-- favorites-item-list  
     |-- favorite-search-bar  
     |-- favorites.*.*  
-|-- home  
-    |-- header  
+|-- home
+    |-- header
+        |-- search-bar
+        |-- header.*.*
     |-- items-list  
         |-- item-card  
     |-- home.*.*  
