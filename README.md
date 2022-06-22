@@ -7,6 +7,42 @@ An amazing app, now with Angular.
 Project developed with Angular, RxJs and Typescript.
 The purpose of this project is to apply the knowledge acquired with Angular's courses.
 
+## Fold structure
+
+### root
+<pre>
+|-- src  
+    |-- app  
+    |-- assets
+    |-- environments
+    |-- stories  
+    
+</pre>
+   
+### app
+
+<pre>
+
+|-- favorites  
+    |-- favorites-modal  
+        |-- favorites-item-list  
+        |-- favorite-search-bar  
+|-- home
+    |-- header
+        |-- price-filter
+        |-- search-bar
+        |-- sort
+        |-- header.*.*
+    |-- items-list  
+        |-- item-card  
+    |-- home.*.*  
+|-- item-detai-page  
+    |-- item-detail  
+|-- services  
+app.*.*  
+
+</pre>
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
