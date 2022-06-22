@@ -1,9 +1,4 @@
-<ng-container class="favorite-item">
-  <mat-card *ngFor="let favItem of favItems">
-    <mat-card-header>
-      <mat-card-title>{{ favItem.title }}</mat-card-title>
-    </mat-card-header>
-
-    <img mat-card-image [src]="favItem.images" />
-  </mat-card>
+<ng-container class="favorite-item" *ngFor="let favItem of favItems">
+  <h3>{{ favItem.title }}</h3>
+  <img [src]="favItem.images" />
 </ng-container>
