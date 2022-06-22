@@ -11,28 +11,28 @@ The purpose of this project is to apply the knowledge acquired with Angular's co
 
 ### root
 
-|-- src
-    |-- app
-    |-- assets
-    |-- stories
+|-- src  
+    |-- app  
+    |-- assets  
+    |-- stories  
    
 ### app
 
-|-- api
-|-- favorites
-    |-- favorites-modal
-    |-- favorites-item-list
-    |-- favorite-search-bar
-    |-- favorites.*.*
-|-- home
-    |-- header
-    |-- items-list
-        |-- item-card
-    |-- home.*.*
-|-- item-detai-page
-    |-- item-detail
-|-- services
-app.*.*
+|-- api  
+|-- favorites  
+    |-- favorites-modal  
+    |-- favorites-item-list  
+    |-- favorite-search-bar  
+    |-- favorites.*.*  
+|-- home  
+    |-- header  
+    |-- items-list  
+        |-- item-card  
+    |-- home.*.*  
+|-- item-detai-page  
+    |-- item-detail  
+|-- services  
+app.*.*  
 
 ## Development server
 
