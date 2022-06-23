@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { FormControl, FormGroup } from "@angular/forms";
-import { Item } from "../model/item";
+import { Item } from "../model/item.interface";
 
-import { SearchFormGroup } from "../model/SearchFormGroup";
+import { SearchFormGroup } from "../model/searchFormGroup.interface";
 
 @Component({
   selector: "app-search-bar",
