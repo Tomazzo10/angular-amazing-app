@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { BehaviorSubject, Observable, startWith } from "rxjs";
-import { Item } from "../model/item";
+import { Item } from "../model/item.interface";
 import { ItemsService } from "../services/items.service";
 
 @Component({
