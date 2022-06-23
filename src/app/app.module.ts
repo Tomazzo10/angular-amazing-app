@@ -11,7 +11,6 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { FavoriteButtonComponent } from "./favorite-button/favorite-button.component";
 import { FavoriteModalComponent } from "./favorite-modal/favorite-modal.component";
 import { FavoriteItemListComponent } from "./favorite-item-list/favorite-item-list.component";
-import { FavoriteSearchComponent } from "./favorite-search/favorite-search.component";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
@@ -24,7 +23,6 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     FavoriteButtonComponent,
     FavoriteModalComponent,
     FavoriteItemListComponent,
-    FavoriteSearchComponent,
   ],
   imports: [
     BrowserModule,
