@@ -1,0 +1,19 @@
+<ng-container>
+  <div>
+    <p>Price</p>
+    <div>
+      <div>
+        {{ min }}
+        <input
+          type="range"
+          min="min"
+          max="max"
+          numeric
+          [(ngModel)]="priceSelected"
+        />
+        {{ max }}
+      </div>
+      <p>{{ priceSelected | currency }}</p>
+    </div>
+  </div>
+</ng-container>
