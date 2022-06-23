@@ -1,6 +1,7 @@
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -13,7 +14,8 @@ import { FavoriteModalComponent } from "./favorite-modal/favorite-modal.componen
 import { FavoriteItemListComponent } from "./favorite-item-list/favorite-item-list.component";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { SortComponent } from './sort/sort.component';
+import { SortComponent } from "./sort/sort.component";
+import { PriceFilterComponent } from "./price-filter/price-filter.component";
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { SortComponent } from './sort/sort.component';
     FavoriteModalComponent,
     FavoriteItemListComponent,
     SortComponent,
+    PriceFilterComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +35,7 @@ import { SortComponent } from './sort/sort.component';
     HttpClientModule,
     ReactiveFormsModule,
     NgbModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
