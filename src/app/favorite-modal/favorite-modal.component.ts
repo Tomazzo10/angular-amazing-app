@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 
 import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
-import { Item } from "../model/item";
+import { Item } from "../model/item.interface";
 
 @Component({
   selector: "app-favorite-modal",
