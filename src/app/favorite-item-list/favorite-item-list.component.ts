@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
-import { Item } from "../model/item";
+import { Item } from "../model/item.interface";
 
 @Component({
   selector: "app-favorite-item-list",
