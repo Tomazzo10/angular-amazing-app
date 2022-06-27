@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { FormControl, FormGroup } from "@angular/forms";
-import { Item } from "../model/item.interface";
 
 import { SearchFormGroup } from "../model/searchFormGroup.interface";
 
@@ -14,19 +13,18 @@ export class SearchBarComponent implements OnInit {
     search: new FormControl("", { nonNullable: true }),
   });
 
-  @Input()
-  items: Item[] = [];
+  @Output()
+  search = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit(): void {}
 
   onSubmit(value: string) {
-    this.items.filter(
-      item =>
-        item.title.toLowerCase().includes(value) ||
-        item.description.toLowerCase().includes(value)
-    );
+    if (value !== "") {
+      console.log(value);
+      this.search.emit(value.toLowerCase());
+    }
   }
 
   resetForm() {
