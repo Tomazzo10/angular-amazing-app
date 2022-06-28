@@ -1,14 +1,19 @@
-<ng-container>
-  <form
-    (ngSubmit)="onSubmit(searchInput.value.toLowerCase())"
-    [formGroup]="searchForm"
-  >
+<div class="search-bar">
+  <form name="searchForm" [formGroup]="searchForm">
     <input
-      #searchInput
       name="search"
       type="text"
+      #searchInput
       placeholder="Search in our amazing collection of items"
     />
-    <button (click)="resetForm()">Pop!</button>
+    <button class="btn-clear" type="reset" (click)="resetForm()">
+      <img
+        class="search-clear"
+        src="../../assets/top-bar/search-box-reset.svg"
+      />
+    </button>
   </form>
-</ng-container>
+  <button class="btn-submit" (click)="onSubmit(searchInput.value)">
+    <img class="glass_icon" src="../../assets/top-bar/glass_icon.svg" />Pop
+  </button>
+</div>
