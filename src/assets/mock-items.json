@@ -1,0 +1,14 @@
+[{
+    "id": "id1",
+    "category_id": "general",
+    "currency": "EUR",
+    "title": "Item one",
+    "description": "This is the first item",
+    "images": [],
+    "price": 10,
+    "type_attributes": "",
+    "slug": "",
+    "reserved": false,
+    "favorited": false,
+    "bump": ""
+}]
