@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
-import { Item } from "../model/item.interface";
+import { SortService } from "../services/sort.service";
 
 @Component({
   selector: "app-sort",
@@ -8,27 +8,19 @@ import { Item } from "../model/item.interface";
   styleUrls: ["./sort.component.scss"],
 })
 export class SortComponent implements OnInit {
-  sortOption: string = "Sort";
+  sortOption: string = "Sort by";
 
-  @Input()
-  items: Item[] = [];
+  // @Input()
+  // items: Item[] = [];
 
-  constructor() {}
+  constructor(private sortService: SortService) {}
 
-  ngOnInit(): void {
-    this.sortOption = "Sort";
-  }
+  ngOnInit() {}
+
+  sortOptions = ["Title", "Description", "PriceDesc", "PriceAsc"];
 
   sort(option: string): void {
     this.sortOption = option;
-    if (option === "Title") {
-      this.items.sort((a, b) => {
-        return a.title < b.title ? -1 : 1;
-      });
-    } else if (option === "Description") {
-      this.items.sort((a, b) => {
-        return a.description < b.description ? -1 : 1;
-      });
-    }
+    this.sortService.sort(option);
   }
 }
