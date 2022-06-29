@@ -13,7 +13,7 @@ import { FavoriteModalComponent } from "./favorite-modal/favorite-modal.componen
 import { FavoriteItemListComponent } from "./favorite-item-list/favorite-item-list.component";
 
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { SortComponent } from './sort/sort.component';
+import { SortComponent } from "./sort/sort.component";
 
 @NgModule({
   declarations: [
