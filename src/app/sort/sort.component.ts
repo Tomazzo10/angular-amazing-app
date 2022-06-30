@@ -1,26 +1,46 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output } from "@angular/core";
+import { EventEmitter } from "@angular/core";
 
-import { SortService } from "../services/sort.service";
+interface Options {
+  label: string;
+  value: string;
+}
 
 @Component({
   selector: "app-sort",
   templateUrl: "./sort.component.html",
   styleUrls: ["./sort.component.scss"],
 })
-export class SortComponent implements OnInit {
-  sortOption: string = "Sort by";
+export class SortComponent {
+  sortSelected: string = "Sort by";
+  sortOptions = [
+    {
+      label: "Sort by",
+      value: "sortBy",
+    },
+    {
+      label: "Title",
+      value: "title",
+    },
+    {
+      label: "Description",
+      value: "description",
+    },
+    {
+      label: "Price: lowest first",
+      value: "priceAsc",
+    },
+    {
+      label: "Price: highest first",
+      value: "priceDesc",
+    },
+  ];
 
-  // @Input()
-  // items: Item[] = [];
+  @Output()
+  optionSelected = new EventEmitter<string>();
 
-  constructor(private sortService: SortService) {}
-
-  ngOnInit() {}
-
-  sortOptions = ["Title", "Description", "PriceDesc", "PriceAsc"];
-
-  sort(option: string): void {
-    this.sortOption = option;
-    this.sortService.sort(option);
+  sort(option: Options): void {
+    this.sortSelected = option.label;
+    this.optionSelected.emit(option.value);
   }
 }
