@@ -12,7 +12,7 @@ import { FavoriteButtonComponent } from "./favorite-button/favorite-button.compo
 import { FavoriteModalComponent } from "./favorite-modal/favorite-modal.component";
 import { FavoriteItemListComponent } from "./favorite-item-list/favorite-item-list.component";
 
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { NgbDropdownModule } from "@ng-bootstrap/ng-bootstrap";
 import { SortComponent } from "./sort/sort.component";
 
 @NgModule({
@@ -31,7 +31,7 @@ import { SortComponent } from "./sort/sort.component";
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule,
+    NgbDropdownModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
