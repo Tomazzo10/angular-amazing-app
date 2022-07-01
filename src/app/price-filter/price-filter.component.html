@@ -8,8 +8,10 @@
           type="range"
           min="min"
           max="max"
+          step="10"
           numeric
           [(ngModel)]="priceSelected"
+          (change)="filterPrice(priceSelected)"
         />
         {{ max }}
       </div>
