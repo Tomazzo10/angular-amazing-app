@@ -1,2 +1,6 @@
 node_modules
 .angular
+
+# Storybook
+documentation.json
+/storybook-static
