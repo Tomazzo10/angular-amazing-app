@@ -5,7 +5,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ItemCardComponent } from "./item-card/item-card.component";
-import { SearchBarComponent } from "./search-bar/search-bar.component";
 import { ItemsListComponent } from "./items-list/items-list.component";
 import { ReactiveFormsModule } from "@angular/forms";
 import { FavoriteButtonComponent } from "./favorite-button/favorite-button.component";
@@ -18,7 +17,6 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
   declarations: [
     AppComponent,
     ItemCardComponent,
-    SearchBarComponent,
     ItemsListComponent,
     FavoriteButtonComponent,
     FavoriteModalComponent,
