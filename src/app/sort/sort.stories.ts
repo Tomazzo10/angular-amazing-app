@@ -14,9 +14,4 @@ export default {
   ],
 } as Meta;
 
-export const Sort: Story = () => ({
-  props: {
-    label: "Sort",
-    primary: true,
-  },
-});
+export const SortStory: Story = () => ({});
