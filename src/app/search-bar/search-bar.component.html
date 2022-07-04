@@ -1,6 +1,6 @@
 <div class="SearchBar">
   <form
-    class="d-flex flex-row align-items-center w-40"
+    class="d-flex flex-row align-items-center w-50"
     name="searchForm"
     [formGroup]="searchForm"
   >
@@ -11,7 +11,7 @@
       #searchInput
       placeholder="Search in our amazing collection of items"
     />
-    <button class="__button--clear" type="reset" (click)="resetForm()">
+    <button class="SearchBar__clear" type="reset" (click)="resetForm()">
       <img
         class="search-clear"
         src="../../assets/top-bar/search-box-reset.svg"
@@ -19,7 +19,7 @@
     </button>
   </form>
   <button
-    class="__button--submit d-flex flex-row justify-content-around"
+    class="SearchBar__submit d-flex flex-row justify-content-around"
     (click)="onSubmit(searchInput.value)"
   >
     <img class="h-100" src="../../assets/top-bar/glass_icon.svg" />Pop
