@@ -7,9 +7,4 @@ export default {
   component: SearchBarComponent,
 } as Meta;
 
-export const Primary: Story = () => ({
-  props: {
-    label: "SearchBar",
-    primary: true,
-  },
-});
+export const SearchBarStory: Story = () => ({});
