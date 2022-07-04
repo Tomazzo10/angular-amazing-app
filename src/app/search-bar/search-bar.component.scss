@@ -17,13 +17,13 @@
             border-radius: 8px;
             outline: none;
         }
-        .__button--clear {
-            display: flex;
-            background-color: transparent;
-            border: none;
-        }
     }
-    .__button--submit {
+    &__clear {
+        display: flex;
+        background-color: transparent;
+        border: none;
+    }
+    &__submit {
         width: 112px;
         padding: 8px 24px 8px 24px;
         border: none;
