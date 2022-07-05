@@ -1,10 +1,6 @@
-import { Component, OnInit, Output } from "@angular/core";
+import { Component, Input, Output } from "@angular/core";
 import { EventEmitter } from "@angular/core";
-
-interface Options {
-  label: string;
-  value: string;
-}
+import { SortOption } from "../model/sortOption.interface";
 
 @Component({
   selector: "app-sort",
@@ -12,34 +8,15 @@ interface Options {
   styleUrls: ["./sort.component.scss"],
 })
 export class SortComponent {
-  sortSelected: string = "Sort by";
-  sortOptions = [
-    {
-      label: "Sort by",
-      value: "sortBy",
-    },
-    {
-      label: "Title",
-      value: "title",
-    },
-    {
-      label: "Description",
-      value: "description",
-    },
-    {
-      label: "Price: lowest first",
-      value: "priceAsc",
-    },
-    {
-      label: "Price: highest first",
-      value: "priceDesc",
-    },
-  ];
+  public sortSelected: string = "Sort by";
+
+  @Input()
+  sortOptions: SortOption[] = [];
 
   @Output()
   optionSelected = new EventEmitter<string>();
 
-  sort(option: Options): void {
+  sort(option: SortOption): void {
     this.sortSelected = option.label;
     this.optionSelected.emit(option.value);
   }
