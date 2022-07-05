@@ -6,7 +6,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ReactiveFormsModule } from "@angular/forms";
 
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { NgbDropdownModule } from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,7 +15,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    NgbModule,
+    NgbDropdownModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
