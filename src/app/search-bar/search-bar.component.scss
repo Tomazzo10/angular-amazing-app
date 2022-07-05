@@ -18,18 +18,20 @@
             outline: none;
         }
     }
-    &__button__clear {
-        display: flex;
-        background-color: transparent;
-        border: none;
-    }
-    &__button__submit {
-        width: 112px;
-        padding: 8px 24px 8px 24px;
-        border: none;
-        border-radius: 32px;
-        background-color: #13C1AC;
-        font-size: 16px;
-        color: white;
+    &__button {
+        &__clear {
+            display: flex;
+            background-color: transparent;
+            border: none;
+        }
+        &__submit {
+            width: 112px;
+            padding: 8px 24px 8px 24px;
+            border: none;
+            border-radius: 32px;
+            background-color: #13C1AC;
+            font-size: 16px;
+            color: white;
+        }
     }
 }
