@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button
+        type="button"
+        class="btn btn-outline-primary"
+        id="selector"
+        ngbDropdownToggle
+      >
+        {{ selected }}
+      </button>
+      <div ngbDropdownMenu aria-labelledby="selector">
+        <button
+          *ngFor="let option of options"
+          [class.active]="option.label === selected"
+          ngbDropdownItem
+          (click)="sort(option)"
+        >
+          {{ option.label }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
