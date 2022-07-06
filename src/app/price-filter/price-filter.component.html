@@ -1,21 +1,21 @@
 <ng-container>
-  <div>
-    <p>Price</p>
-    <div>
-      <div>
-        {{ min }}
+  <div class="PriceFilterContainer d-flex flex-column align-items-center">
+    <p>Select the maximum price</p>
+    <div class="__track d-flex flex-column align-items-end">
+      <div class="d-flex flex-row align-items-center">
+        {{ min | currency: "EUR" }}
         <input
           type="range"
-          min="min"
-          max="max"
-          step="10"
+          min="{{ min }}"
+          max="{{ max }}"
+          step="50"
           numeric
           [(ngModel)]="priceSelected"
           (change)="filterPrice(priceSelected)"
         />
-        {{ max }}
+        {{ max | currency: "EUR" }}
       </div>
-      <p>{{ priceSelected | currency }}</p>
+      <p>{{ priceSelected | currency: "EUR" }}</p>
     </div>
   </div>
 </ng-container>
