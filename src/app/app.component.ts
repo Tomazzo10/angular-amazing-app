@@ -1,6 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
-import { Item } from "./model/item.interface";
 import { ItemsService } from "./services/items.service";
 
 @Component({
@@ -8,8 +6,4 @@ import { ItemsService } from "./services/items.service";
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"],
 })
-export class AppComponent implements OnInit {
-  constructor(private itemsService: ItemsService) {}
-
-  ngOnInit() {}
-}
+export class AppComponent {}

@@ -1,6 +1,5 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { FormControl, FormGroup } from "@angular/forms";
-import { Item } from "../model/item.interface";
 
 import { SearchFormGroup } from "../model/searchFormGroup.interface";
 
@@ -9,27 +8,19 @@ import { SearchFormGroup } from "../model/searchFormGroup.interface";
   templateUrl: "./search-bar.component.html",
   styleUrls: ["./search-bar.component.scss"],
 })
-export class SearchBarComponent implements OnInit {
-  searchForm = new FormGroup<SearchFormGroup>({
+export class SearchBarComponent {
+  public searchForm = new FormGroup<SearchFormGroup>({
     search: new FormControl("", { nonNullable: true }),
   });
 
-  @Input()
-  items: Item[] = [];
+  @Output()
+  search = new EventEmitter<string>();
 
-  constructor() {}
-
-  ngOnInit(): void {}
-
-  onSubmit(value: string) {
-    this.items.filter(
-      item =>
-        item.title.toLowerCase().includes(value) ||
-        item.description.toLowerCase().includes(value)
-    );
+  public onSubmit(value: string) {
+    this.search.emit(value);
   }
 
-  resetForm() {
+  public resetForm() {
     this.searchForm.reset();
   }
 }

@@ -1,14 +1,27 @@
-<ng-container>
+<div class="SearchBar">
   <form
-    (ngSubmit)="onSubmit(searchInput.value.toLowerCase())"
+    class="d-flex flex-row align-items-center w-50"
+    name="searchForm"
     [formGroup]="searchForm"
   >
     <input
-      #searchInput
+      class="w-100"
       name="search"
       type="text"
+      #searchInput
       placeholder="Search in our amazing collection of items"
     />
-    <button (click)="resetForm()">Pop!</button>
+    <button class="SearchBar__button__clear" type="reset" (click)="resetForm()">
+      <img
+        class="search-clear"
+        src="../../assets/top-bar/search-box-reset.svg"
+      />
+    </button>
   </form>
-</ng-container>
+  <button
+    class="SearchBar__button__submit d-flex flex-row justify-content-around"
+    (click)="onSubmit(searchInput.value)"
+  >
+    <img class="h-100" src="../../assets/top-bar/glass_icon.svg" />Pop
+  </button>
+</div>
