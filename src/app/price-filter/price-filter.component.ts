@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from "@angular/core";
+import { Component, Output } from "@angular/core";
 
 @Component({
   selector: "app-price-filter",
@@ -6,14 +6,14 @@ import { Component, OnInit, Output } from "@angular/core";
   styleUrls: ["./price-filter.component.scss"],
 })
 export class PriceFilterComponent {
-  min: number = 0;
-  max: number = 100;
-  priceSelected: number = 0;
+  public min: number = 0;
+  public max: number = 1000;
+  public priceSelected: number = 0;
 
   @Output()
   priceToFilter: number = 0;
 
-  filterPrice(price: number): void {
-    setTimeout(() => (this.priceToFilter = price), 500);
+  public filterPrice(price: number): void {
+    this.priceToFilter = price;
   }
 }
