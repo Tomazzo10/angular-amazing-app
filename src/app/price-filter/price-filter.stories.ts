@@ -15,9 +15,4 @@ export default {
   ],
 } as Meta;
 
-export const PriceFilter: Story = () => ({
-  props: {
-    label: "Price filter",
-    primary: true,
-  },
-});
+export const PriceFilter: Story = () => ({});
