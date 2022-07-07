@@ -8,16 +8,18 @@ import { SelectOption } from "../model/selectOption.interface";
   styleUrls: ["./selector.component.scss"],
 })
 export class SelectorComponent {
-  public selected: string = "Sort by";
+  public selected: SelectOption = { label: "", value: "" };
 
-  @Input()
-  options: SelectOption[] = [];
+  @Input() options: SelectOption[] = [];
+  @Input() selectorDescription: string = "";
+  @Input() set defaultOption(options: SelectOption[]) {
+    this.selected = options[0];
+  }
 
-  @Output()
-  optionSelected = new EventEmitter<string>();
+  @Output() optionSelected = new EventEmitter<string>();
 
-  public sort(option: SelectOption): void {
-    this.selected = option.label;
+  public changeSelected(option: SelectOption): void {
+    this.selected = option;
     this.optionSelected.emit(option.value);
   }
 }

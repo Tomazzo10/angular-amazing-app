@@ -18,10 +18,6 @@ export const SelectorStory: Story = () => ({
   props: {
     options: [
       {
-        label: "Sort by",
-        value: "sortBy",
-      },
-      {
         label: "Title",
         value: "title",
       },
@@ -30,12 +26,31 @@ export const SelectorStory: Story = () => ({
         value: "description",
       },
       {
-        label: "Price: lowest first",
+        label: "Price (lowest first)",
         value: "priceAsc",
       },
       {
-        label: "Price: highest first",
+        label: "Price (highest first)",
         value: "priceDesc",
+      },
+    ],
+    accessibilityDescription: "optionsToFilterSelector",
+    defaultOption: [
+      {
+        label: "Price (lowest first)",
+        value: "priceAsc",
+      },
+      {
+        label: "Price (highest first)",
+        value: "priceDesc",
+      },
+      {
+        label: "Title",
+        value: "title",
+      },
+      {
+        label: "Description",
+        value: "description",
       },
     ],
   },
