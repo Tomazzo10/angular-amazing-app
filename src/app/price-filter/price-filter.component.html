@@ -3,17 +3,17 @@
     <p>Select the maximum price</p>
     <div class="__track d-flex flex-column align-items-end">
       <div class="d-flex flex-row align-items-center">
-        {{ min | currency: "EUR" }}
+        {{ range.min | currency: "EUR" }}
         <input
           type="range"
-          min="{{ min }}"
-          max="{{ max }}"
+          min="{{ range.min }}"
+          max="{{ range.max }}"
           step="50"
           numeric
           [(ngModel)]="priceSelected"
           (change)="filterPrice(priceSelected)"
         />
-        {{ max | currency: "EUR" }}
+        {{ range.max | currency: "EUR" }}
       </div>
       <p>{{ priceSelected | currency: "EUR" }}</p>
     </div>
