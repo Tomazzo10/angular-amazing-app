@@ -15,4 +15,11 @@ export default {
   ],
 } as Meta;
 
-export const PriceFilter: Story = () => ({});
+export const PriceFilter: Story = () => ({
+  props: {
+    range: {
+      min: 0,
+      max: 1000,
+    },
+  },
+});
