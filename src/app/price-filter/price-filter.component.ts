@@ -1,4 +1,6 @@
-import { Component, Output } from "@angular/core";
+import { Component, Input, Output } from "@angular/core";
+
+import { PriceRange } from "../model/priceRange.interface";
 
 @Component({
   selector: "app-price-filter",
@@ -6,9 +8,9 @@ import { Component, Output } from "@angular/core";
   styleUrls: ["./price-filter.component.scss"],
 })
 export class PriceFilterComponent {
-  public min: number = 0;
-  public max: number = 1000;
   public priceSelected: number = 0;
+
+  @Input() range: PriceRange = { min: 0, max: 0 };
 
   @Output()
   priceToFilter: number = 0;
