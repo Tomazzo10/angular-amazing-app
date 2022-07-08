@@ -4,7 +4,7 @@ import { Meta, moduleMetadata, Story } from "@storybook/angular";
 import { SelectorComponent } from "./selector.component";
 
 export default {
-  title: "Selector",
+  title: "Component/Selector",
   component: SelectorComponent,
   decorators: [
     moduleMetadata({
@@ -35,23 +35,5 @@ export const SelectorStory: Story = () => ({
       },
     ],
     accessibilityDescription: "optionsToFilterSelector",
-    defaultOption: [
-      {
-        label: "Price (lowest first)",
-        value: "priceAsc",
-      },
-      {
-        label: "Price (highest first)",
-        value: "priceDesc",
-      },
-      {
-        label: "Title",
-        value: "title",
-      },
-      {
-        label: "Description",
-        value: "description",
-      },
-    ],
   },
 });
