@@ -5,7 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { PriceFilterComponent } from "./price-filter.component";
 
 export default {
-  title: "Price filter",
+  title: "Component/Price filter",
   component: PriceFilterComponent,
   decorators: [
     moduleMetadata({
