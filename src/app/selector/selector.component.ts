@@ -1,4 +1,9 @@
-import { Component, Input, Output } from "@angular/core";
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Input,
+  Output,
+} from "@angular/core";
 import { EventEmitter } from "@angular/core";
 import { SelectOption } from "../model/selectOption.interface";
 
@@ -6,15 +11,18 @@ import { SelectOption } from "../model/selectOption.interface";
   selector: "app-selector",
   templateUrl: "./selector.component.html",
   styleUrls: ["./selector.component.scss"],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SelectorComponent {
-  public selected: SelectOption = { label: "", value: "" };
+  public allOptions: SelectOption[] = [];
+  public selected: SelectOption | null = null;
 
-  @Input() options: SelectOption[] = [];
-  @Input() selectorDescription: string = "";
-  @Input() set defaultOption(options: SelectOption[]) {
-    this.selected = options[0];
+  @Input() set options(options: SelectOption[]) {
+    this.allOptions = options;
+    this.selected = options.length ? options[0] : null;
+    this.optionSelected.emit(this.selected?.value);
   }
+  @Input() selectorDescription: string = "";
 
   @Output() optionSelected = new EventEmitter<string>();
 
