@@ -15,7 +15,7 @@
         attr.aria-labelledby="{{ selectorDescription }}"
       >
         <button
-          *ngFor="let option of options"
+          *ngFor="let option of allOptions"
           [class.active]="option.value === selected.value"
           ngbDropdownItem
           (click)="changeSelected(option)"
