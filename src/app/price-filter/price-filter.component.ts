@@ -14,16 +14,16 @@ import { PriceRange } from "../model/priceRange.interface";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PriceFilterComponent {
-  public definedRange: PriceRange | null = null;
-  public priceSelected: number | null = null;
+  public definedRange!: PriceRange;
+  public priceSelected!: number;
 
   @Input() set range(range: PriceRange) {
     this.definedRange = range;
-    this.priceSelected = range.max ? range.max : null;
+    this.priceSelected = range.max;
   }
 
   @Output()
-  priceToFilter: number = 0;
+  priceToFilter!: number;
 
   public filterPrice(price: number): void {
     this.priceToFilter = price;
