@@ -7,7 +7,7 @@
         id="{{ selectorDescription }}"
         ngbDropdownToggle
       >
-        {{ "Sort by: " + selected.label }}
+        {{ "Sort by: " + selected?.label }}
       </button>
       <div
         ngbDropdownMenu
@@ -16,7 +16,7 @@
       >
         <button
           *ngFor="let option of allOptions"
-          [class.active]="option.value === selected.value"
+          [class.active]="option.value === selected?.value"
           ngbDropdownItem
           (click)="changeSelected(option)"
         >
