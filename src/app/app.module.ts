@@ -11,7 +11,7 @@ import { SelectorComponent } from "./selector/selector.component";
 import { NgbDropdownModule } from "@ng-bootstrap/ng-bootstrap";
 
 @NgModule({
-  declarations: [AppComponent, SearchBarComponent, SelectorComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
