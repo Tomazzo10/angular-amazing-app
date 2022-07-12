@@ -1,0 +1,21 @@
+<ng-container>
+  <div class="SliderContainer d-flex flex-column align-items-center">
+    <div class="__track d-flex flex-column align-items-end">
+      <div class="d-flex flex-column align-items-center">
+        <input
+          type="range"
+          min="{{ min }}"
+          max="{{ max }}"
+          step="50"
+          numeric
+          [(ngModel)]="valueSelected"
+          (change)="selectMaxValue(valueSelected)"
+        />
+      </div>
+    </div>
+    <div class="w-100 d-flex flex-row justify-content-center">
+      <p>{{ description }}</p>
+      <p class="mx-1">{{ valueSelected + unit }}</p>
+    </div>
+  </div>
+</ng-container>
