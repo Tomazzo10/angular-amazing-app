@@ -1,5 +1,4 @@
-import { Component, Input, Output } from "@angular/core";
-import { BehaviorSubject, Observable } from "rxjs";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Item } from "../model/item.interface";
 
 @Component({
@@ -8,16 +7,15 @@ import { Item } from "../model/item.interface";
   styleUrls: ["./item-card.component.scss"],
 })
 export class ItemCardComponent {
-  private titleSubject: BehaviorSubject<Item[]> = new BehaviorSubject<Item[]>(
-    []
-  );
+  public itemData!: Item;
 
-  @Input()
-  public item$: Observable<Item[]> = this.titleSubject.asObservable();
-
-  @Output()
-  addToFavorite!: string;
+  @Input() set item(item: Item) {
+    this.itemData = item;
+  }
 
   @Output()
-  removeFromFavorite!: string;
+  addToFavorite = new EventEmitter<string>();
+
+  @Output()
+  removeFromFavorite = new EventEmitter<string>();
 }
