@@ -4,7 +4,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { SearchBarComponent } from "./search-bar.component";
 
 export default {
-  title: "SearchBar",
+  title: "Component/SearchBar",
   component: SearchBarComponent,
   decorators: [
     moduleMetadata({
