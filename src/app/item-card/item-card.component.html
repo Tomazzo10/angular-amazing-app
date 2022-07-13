@@ -1,8 +1,18 @@
 <div class="item">
-  <ul class="__container">
-    <h4>{{ item$.title }}</h4>
-    <img class="item-image" [src]="item$.image" />
-    <h5>{{ item$.description }}</h5>
-    <h5>{{ item$.price.amount | currency: item$.price.currency }}</h5>
-  </ul>
+  <div class="__container">
+    <img class="__item-image" [src]="itemData.image" />
+    <h4>{{ itemData.title }}</h4>
+    <p>{{ itemData.description }}</p>
+    <div class="__price-fav">
+      <h5>{{ itemData.price.amount | currency: itemData.price.currency }}</h5>
+      <div [ngSwitch]="itemData.favorited">
+        <button *ngSwitchCase="false">
+          <img src="../../assets/item-card/heart-empty.svg" />
+        </button>
+        <button *ngSwitchCase="true">
+          <img src="../../assets/item-card/heart-full.svg" />
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
