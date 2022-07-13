@@ -14,19 +14,38 @@ export default {
   ],
 } as Meta;
 
-export const SearchBarStory: Story = () => ({
+export const ItemCardNotFavorited: Story = () => ({
   props: {
-    item$: {
+    item: {
       id: "j2vg1n31g313g",
-      title: "This is the first item",
+      title: "Wallapop",
       description:
-        "Here there's a very long description of an item to test how long descriptions are going to work in the application",
-      image: "daskdsakdj",
+        "This is a very long description of an item to test how long descriptions are going to work in the application",
+      image:
+        "https://freepikpsd.com/file/2019/10/wallapop-logo-png-3-Transparent-Images-Free.png",
       price: {
         amount: 100,
         currency: "EUR",
       },
       favorited: false,
+    },
+  },
+});
+
+export const ItemCardStoryFavorited: Story = () => ({
+  props: {
+    item: {
+      id: "j2vg1n31g313g",
+      title: "Wallapop",
+      description:
+        "This is a very long description of an item to test how long descriptions are going to work in the application",
+      image:
+        "https://freepikpsd.com/file/2019/10/wallapop-logo-png-3-Transparent-Images-Free.png",
+      price: {
+        amount: 100,
+        currency: "EUR",
+      },
+      favorited: true,
     },
   },
 });
