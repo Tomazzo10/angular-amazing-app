@@ -15,24 +15,18 @@ import { SliderConfig } from "../model/sliderConfig.interface";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SliderComponent {
-  public min!: number;
-  public max!: number;
+  public data!: SliderConfig;
   public value!: number;
-  public unit!: string;
-  public description!: string;
 
   @Input() set config(config: SliderConfig) {
-    this.min = config.min;
-    this.max = config.max;
+    this.data = config;
     this.value = config.max;
-    this.unit = config.unit;
-    this.description = config.description;
   }
 
   @Output()
-  selectedMaxValue = new EventEmitter<number>();
+  selectedValue = new EventEmitter<number>();
 
-  public selectMaxValue(value: number): void {
-    this.selectedMaxValue.emit(value);
+  public selectValue(value: number): void {
+    this.selectedValue.emit(value);
   }
 }
