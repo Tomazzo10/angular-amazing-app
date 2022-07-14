@@ -20,11 +20,9 @@ export class ItemCardComponent {
   removeFromFavorite = new EventEmitter<Item>();
 
   public addFavorite(item: Item) {
-    this.itemData.favorited = true;
     this.addToFavorite.emit(item);
   }
   public removeFavorite(item: Item) {
-    this.itemData.favorited = false;
     this.removeFromFavorite.emit(item);
   }
 }
