@@ -1,19 +1,21 @@
 <div class="item">
   <div class="__container">
     <img class="__item-image" [src]="itemData.image" />
-    <h4 class="__item-title">{{ itemData.title }}</h4>
-    <p>{{ itemData.description }}</p>
-    <div class="__price-fav">
-      <h5>
-        {{ itemData.price.amount | currency: itemData.price.currency }}
-      </h5>
-      <div [ngSwitch]="itemData.favorited">
-        <button *ngSwitchCase="false" (click)="addFavorite(itemData)">
-          <img src="../../assets/item-card/heart-empty.svg" />
-        </button>
-        <button *ngSwitchCase="true" (click)="removeFavorite(itemData)">
-          <img src="../../assets/item-card/heart-full.svg" />
-        </button>
+    <div class="__item-text">
+      <h4 class="__item-title">{{ title }}</h4>
+      <p>{{ description }}</p>
+      <div class="__price-fav">
+        <h5>
+          {{ itemData.price.amount | currency: itemData.price.currency }}
+        </h5>
+        <div [ngSwitch]="itemData.favorited">
+          <button *ngSwitchCase="false" (click)="addFavorite(itemData)">
+            <img src="../../assets/item-card/heart-empty.svg" />
+          </button>
+          <button *ngSwitchCase="true" (click)="removeFavorite(itemData)">
+            <img src="../../assets/item-card/heart-full.svg" />
+          </button>
+        </div>
       </div>
     </div>
   </div>
