@@ -22,7 +22,7 @@ export const ItemCardNotFavorited: Story = () => ({
       description:
         "This is a long description of an item to test how long descriptions are going to work in the application",
       image:
-        "https://freepikpsd.com/file/2019/10/wallapop-logo-png-3-Transparent-Images-Free.png",
+        "https://play-lh.googleusercontent.com/zbQSHTc9DGlNkV8sqyVQCiE7H700fJi3dwfcKypbLcBz81N15RiL7RacGmFM70uVhaO6",
       price: {
         amount: 100,
         currency: "EUR",
@@ -40,7 +40,7 @@ export const ItemCardStoryFavorited: Story = () => ({
       description:
         "This is a long description of an item to test how long descriptions are going to work in the application",
       image:
-        "https://freepikpsd.com/file/2019/10/wallapop-logo-png-3-Transparent-Images-Free.png",
+        "https://play-lh.googleusercontent.com/zbQSHTc9DGlNkV8sqyVQCiE7H700fJi3dwfcKypbLcBz81N15RiL7RacGmFM70uVhaO6",
       price: {
         amount: 100,
         currency: "EUR",
@@ -58,7 +58,7 @@ export const ItemCardLongString: Story = () => ({
       description:
         "This is a very long long long long long long long long long long description of an item to test how long descriptions are going to work in the application",
       image:
-        "https://freepikpsd.com/file/2019/10/wallapop-logo-png-3-Transparent-Images-Free.png",
+        "https://play-lh.googleusercontent.com/zbQSHTc9DGlNkV8sqyVQCiE7H700fJi3dwfcKypbLcBz81N15RiL7RacGmFM70uVhaO6",
       price: {
         amount: 100,
         currency: "EUR",
