@@ -4,11 +4,12 @@
     .__container {
         display: flex;
         flex-direction: column;
-        border: 2px solid #F9FAFA;
+        border: 4px solid #F9FAFA;
         border-radius: 8px;
         padding: 4px;
+        background-color: white;
         &:hover{
-            box-shadow: 4px 4px #ECEFF1;
+            box-shadow: 4px 4px #CFD8DC;
         }
     }
     .__item-image {
@@ -34,12 +35,10 @@
         }
     }
     p {
-        margin-left: 4px;
-        margin-right: 4px;
+        margin: 4px;
         color: #455D63;
     }
     h5 {
-        margin-left: 4px;
-        margin-right: 4px;
+        margin: 4px;
     }
 }
