@@ -8,7 +8,7 @@ import { Item } from "../model/item.interface";
 })
 export class ItemCardComponent {
   private maxDescriptionLength: number = 150;
-  private maxTitleLength: number = 15;
+  private maxTitleLength: number = 14;
   public itemData!: Item;
   public description!: string;
   public title!: string;
