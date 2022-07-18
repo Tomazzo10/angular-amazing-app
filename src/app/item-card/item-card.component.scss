@@ -1,11 +1,7 @@
-.item {
-    max-width: 224px;
-    max-height: 264px;
-    .__container {
+.ItemCard {
+    &__container {
         width: 216px;
         height: 464px;
-        display: flex;
-        flex-direction: column;
         border: 4px solid #F9FAFA;
         border-radius: 8px;
         padding: 4px;
@@ -14,26 +10,23 @@
             box-shadow: 4px 4px #CFD8DC;
         }
     }
-    .__item-image {
+    &__image {
         max-width: 200px;
         max-height: 200px;
-        align-self: center;
         border-radius: 8px;
     }
-    .__item-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    &__text {
         height: 248px;
-        .__item-title {
-            display: flex;
-            margin: 4px;
+        max-width: 216px;
+        .title {
+            max-height: 32px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 12px 4px 4px 4px;
         }
     }
-    .__price-fav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+    &__price-fav {
         padding: 4px;
         button {
             background-color: transparent;
@@ -42,8 +35,13 @@
         }
     }
     p {
-        margin: 4px;
-        color: #455D63;
+        max-height: 146px;
+        max-width: 192px;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin: 4px
     }
     h5 {
         margin: 4px;
