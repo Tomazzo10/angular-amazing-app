@@ -1,3 +1,10 @@
-<ng-container *ngIf="items$ | async as items">
-  <div *ngFor="let item of items"></div>
+<ng-container *ngIf="itemsData">
+  <div class="row">
+    <div
+      class="col-lg-3 col-md-3 col-sm-4 col-xl-2 col-xs-2 m-2"
+      *ngFor="let item of itemsData"
+    >
+      <app-item-card [item]="item"></app-item-card>
+    </div>
+  </div>
 </ng-container>
