@@ -1,9 +1,10 @@
 import { NgModule } from "@angular/core";
 
 import { ItemsListComponent } from "./items-list.component";
+import { ItemCardModule } from "../item-card/item-card.module";
 
 @NgModule({
-  imports: [],
+  imports: [ItemCardModule],
   declarations: [ItemsListComponent],
   exports: [ItemsListComponent],
 })
