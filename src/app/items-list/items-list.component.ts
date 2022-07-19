@@ -9,7 +9,7 @@ import { Item } from "../model/item.interface";
 })
 export class ItemsListComponent {
   @Input()
-  items: Item[] = [];
+  items$: Item[] = [];
 
   @Output()
   itemData = new EventEmitter<Item>();
