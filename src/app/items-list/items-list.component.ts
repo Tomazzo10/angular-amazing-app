@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 import { Item } from "../model/item.interface";
 
@@ -8,9 +8,9 @@ import { Item } from "../model/item.interface";
   styleUrls: ["./items-list.component.scss"],
 })
 export class ItemsListComponent {
-  @Input()
-  items$: Item[] = [];
+  public itemsData!: Item[];
 
-  @Output()
-  itemData = new EventEmitter<Item>();
+  @Input() set items(items: Item[]) {
+    this.itemsData = items;
+  }
 }
