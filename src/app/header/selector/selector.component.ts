@@ -5,7 +5,7 @@ import {
   Output,
 } from "@angular/core";
 import { EventEmitter } from "@angular/core";
-import { SelectOption } from "../model/selectOption.interface";
+import { SelectOption } from "../../model/selectOption.interface";
 
 @Component({
   selector: "app-selector",

@@ -6,7 +6,7 @@ import {
   EventEmitter,
 } from "@angular/core";
 
-import { SliderConfig } from "../model/sliderConfig.interface";
+import { SliderConfig } from "../../model/sliderConfig.interface";
 
 @Component({
   selector: "app-slider",
