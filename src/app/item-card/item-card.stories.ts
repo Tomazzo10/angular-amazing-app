@@ -107,3 +107,23 @@ export const ItemCardSmallImage: Story = () => ({
     ],
   },
 });
+
+export const ItemCardTallImage: Story = () => ({
+  props: {
+    items: [
+      {
+        id: "j2vg1n31g313g",
+        title: "Wallapop",
+        description:
+          "This is a description of an item to test how long descriptions are going to work in the application",
+        image:
+          "https://c7.alamy.com/compes/c00jxf/alta-resolucion-panoramica-vertical-del-interior-de-james-r-thompson-center-chicago-illinois-ee-uu-c00jxf.jpg",
+        price: {
+          amount: 100,
+          currency: "EUR",
+        },
+        favorited: true,
+      },
+    ],
+  },
+});
