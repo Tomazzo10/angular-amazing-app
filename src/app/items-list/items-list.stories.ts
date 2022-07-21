@@ -20,7 +20,7 @@ export const ItemsListStory: Story = () => ({
     items: [
       {
         id: "j2vg1n31g313g",
-        title: "Wallapop pop pop pop",
+        title: "Wallapop pop pop pop pop",
         description:
           "This is a long description of an item to test how long descriptions are going to work in the application",
         image:
@@ -71,7 +71,7 @@ export const ItemsListStory: Story = () => ({
       },
       {
         id: "j2vg1n31g313g",
-        title: "Wallapop pop pop pop",
+        title: "Wallapop pop pop pop pop",
         description:
           "This is a long description of an item to test how long descriptions are going to work in the application",
         image:
@@ -171,5 +171,11 @@ export const ItemsListStory: Story = () => ({
         favorited: true,
       },
     ],
+  },
+});
+
+export const ItemsListEmptyStory: Story = () => ({
+  props: {
+    items: [],
   },
 });
