@@ -11,11 +11,16 @@
         }
     }
     &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 200px;
         height: 200px;
-        max-width: 200px;
-        max-height: 200px;
-        border-radius: 8px;
+        img {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 8px;
+        }
     }
     &__text {
         height: 248px;
