@@ -1,10 +1,19 @@
-<ng-container *ngIf="itemsData">
-  <div class="row">
-    <div
-      class="col-lg-3 col-md-3 col-sm-4 col-xl-2 col-xs-2 m-3"
-      *ngFor="let item of itemsData"
-    >
+<ng-container *ngIf="items.length > 0">
+  <div class="ItemList__container row">
+    <div class="ItemList__card" *ngFor="let item of items">
       <app-item-card [item]="item"></app-item-card>
     </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="items.length === 0">
+  <div class="d-flex flex-column align-items-center justify-content-center">
+    <p class="m-3">Parece que los items salieron de vacaciones 🌴</p>
+    <img
+      class="m-3"
+      width="248px"
+      height="248px"
+      src="../../assets/items-list/595e54c670308b1a215b70c2.png"
+    />
+    <p class="m-3">¡Intenta otra búsqueda!</p>
   </div>
 </ng-container>
