@@ -8,9 +8,5 @@ import { Item } from "../model/item.interface";
   styleUrls: ["./items-list.component.scss"],
 })
 export class ItemsListComponent {
-  public itemsData!: Item[];
-
-  @Input() set items(items: Item[]) {
-    this.itemsData = items;
-  }
+  @Input() items!: Item[];
 }
