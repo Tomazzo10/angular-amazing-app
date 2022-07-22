@@ -1,3 +1,19 @@
 .options {
     inset: 0px 0px auto 0px !important;
 }
+.btn {
+    outline: solid #0B9F93;
+    color: #455D63;
+    &:hover{
+        color:white;
+        background-color: #13C1AC;
+    }
+}
+.active {
+    background-color: #13C1AC !important;
+}
+.selected {
+    &:active {
+        background-color: #13C1AC !important;
+    }
+}
