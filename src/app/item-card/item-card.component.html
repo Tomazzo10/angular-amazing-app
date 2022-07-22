@@ -1,6 +1,8 @@
 <div class="ItemCard" *ngIf="itemData">
   <div class="ItemCard__container d-flex flex-column">
-    <img class="ItemCard__image align-self-center" [src]="itemData.image" />
+    <div class="ItemCard__image">
+      <img [src]="itemData.image" />
+    </div>
     <div class="ItemCard__text d-flex flex-column justify-content-between">
       <h5 class="title">{{ itemData.title }}</h5>
       <p>{{ itemData.description }}</p>
