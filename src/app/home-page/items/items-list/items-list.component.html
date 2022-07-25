@@ -1,7 +1,7 @@
 <ng-container *ngIf="items.length > 0">
-  <div class="ItemList__container row">
+  <div class="ItemList__container col-8 offset-2 row">
     <div class="ItemList__card" *ngFor="let item of items">
-      <app-item-card [item]="item"></app-item-card>
+      <app-item-card class="col" [item]="item"></app-item-card>
     </div>
   </div>
 </ng-container>
