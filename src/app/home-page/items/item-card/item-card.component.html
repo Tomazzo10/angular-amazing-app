@@ -1,0 +1,25 @@
+<div class="ItemCard" *ngIf="itemData">
+  <div class="ItemCard__container d-flex flex-column">
+    <div class="ItemCard__image">
+      <img [src]="itemData.image" />
+    </div>
+    <div class="ItemCard__text d-flex flex-column justify-content-between">
+      <h5 class="title">{{ itemData.title }}</h5>
+      <p>{{ itemData.description }}</p>
+      <div class="ItemCard__price-fav d-flex flex-row justify-content-between">
+        <h5>
+          {{ itemData.price?.amount | currency: itemData.price?.currency }}
+        </h5>
+        <button
+          *ngIf="itemData.favorited"
+          (click)="removeFavorite(itemData.id)"
+        >
+          <img src="../../assets/item-card/heart-full.svg" />
+        </button>
+        <button *ngIf="!itemData.favorited" (click)="addFavorite(itemData.id)">
+          <img src="../../assets/item-card/heart-empty.svg" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
