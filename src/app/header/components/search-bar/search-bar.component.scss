@@ -26,13 +26,20 @@
             border: none;
         }
         &__submit {
+            align-items: center;
             width: 112px;
             padding: 8px 24px 8px 24px;
-            border: none;
+            border: 2px solid #13C1AC;
             border-radius: 32px;
-            background-color: #13C1AC;
-            font-size: 16px;
-            color: white;
+            background-color: white;
+            color: #455D63;
+            &:hover {
+                background-color: #13C1AC;
+                color: white;
+                .SearchBar__button__submit__icon {
+                    filter: brightness(0) invert(1);
+                }
+            }
         }
     }
 }
