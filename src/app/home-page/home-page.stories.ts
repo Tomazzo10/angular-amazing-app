@@ -21,7 +21,11 @@ export default {
   ],
 } as Meta;
 
-export const HomePageStoryNoItems: Story = () => ({});
+export const HomePageStoryNoItems: Story = () => ({
+  props: {
+    items: [],
+  },
+});
 
 export const HomePageStoryWithItems: Story = () => ({
   props: {
