@@ -8,10 +8,16 @@
       class="w-100"
       name="search"
       type="text"
-      #searchInput
+      formControlName="search"
+      (input)="onChange()"
       placeholder="Search in our amazing collection of items"
     />
-    <button class="SearchBar__button__clear" type="reset" (click)="resetForm()">
+    <button
+      *ngIf="resetIconFlag"
+      class="SearchBar__button__clear"
+      type="reset"
+      (click)="resetForm()"
+    >
       <img
         class="search-clear"
         src="../../assets/top-bar/search-box-reset.svg"
@@ -20,7 +26,7 @@
   </form>
   <button
     class="SearchBar__button__submit d-flex flex-row justify-content-around"
-    (click)="onSubmit(searchInput.value)"
+    (click)="onSubmit()"
   >
     <img
       class="SearchBar__button__submit__icon h-100"
