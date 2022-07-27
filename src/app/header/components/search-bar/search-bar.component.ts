@@ -12,15 +12,25 @@ export class SearchBarComponent {
   public searchForm = new FormGroup<SearchFormGroup>({
     search: new FormControl("", { nonNullable: true }),
   });
+  public searchBoxValue: string | undefined = "";
+  public resetIconFlag: boolean = false;
 
   @Output()
-  search = new EventEmitter<string>();
+  searchValue = new EventEmitter<string>();
 
-  public onSubmit(value: string) {
-    this.search.emit(value);
+  public onSubmit(): void {
+    this.searchValue.emit(this.searchForm.get("search")?.value);
   }
 
-  public resetForm() {
+  public resetForm(): void {
     this.searchForm.reset();
+    this.resetIconFlag = false;
+  }
+
+  public onChange(): void {
+    this.searchBoxValue = this.searchForm.get("search")?.value;
+    this.searchBoxValue?.length
+      ? (this.resetIconFlag = true)
+      : (this.resetIconFlag = false);
   }
 }
