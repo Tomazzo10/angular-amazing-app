@@ -1,4 +1,9 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import {
+  Component,
+  Output,
+  EventEmitter,
+  ChangeDetectionStrategy,
+} from "@angular/core";
 import { FormControl, FormGroup } from "@angular/forms";
 
 import { SearchFormGroup } from "../../../model/searchFormGroup.interface";
@@ -7,6 +12,7 @@ import { SearchFormGroup } from "../../../model/searchFormGroup.interface";
   selector: "app-search-bar",
   templateUrl: "./search-bar.component.html",
   styleUrls: ["./search-bar.component.scss"],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SearchBarComponent {
   public searchForm = new FormGroup<SearchFormGroup>({
