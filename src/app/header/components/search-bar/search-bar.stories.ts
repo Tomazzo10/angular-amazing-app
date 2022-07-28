@@ -1,5 +1,6 @@
 import { Meta, moduleMetadata, Story } from "@storybook/angular";
 import { ReactiveFormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
 
 import { SearchBarComponent } from "./search-bar.component";
 
@@ -9,7 +10,7 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [SearchBarComponent],
-      imports: [ReactiveFormsModule],
+      imports: [CommonModule, ReactiveFormsModule],
     }),
   ],
 } as Meta;
