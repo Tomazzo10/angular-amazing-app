@@ -182,6 +182,19 @@ export const HomePageStoryWithItems: Story = () => ({
         },
         favorited: true,
       },
+      {
+        id: "j2vg1n31g313g",
+        title: "Wallapoooop",
+        description:
+          "This is a brief description of an item to test how long descriptions are going to work in the application",
+        image:
+          "https://play-lh.googleusercontent.com/zbQSHTc9DGlNkV8sqyVQCiE7H700fJi3dwfcKypbLcBz81N15RiL7RacGmFM70uVhaO6",
+        price: {
+          amount: 1000,
+          currency: "EUR",
+        },
+        favorited: true,
+      },
     ],
   },
 });
