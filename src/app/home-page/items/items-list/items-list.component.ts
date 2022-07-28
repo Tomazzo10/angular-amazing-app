@@ -1,6 +1,6 @@
 import { Component, Input } from "@angular/core";
 
-import { Item } from "../model/item.interface";
+import { Item } from "../../../model/item.interface";
 
 @Component({
   selector: "app-items-list",
@@ -8,5 +8,5 @@ import { Item } from "../model/item.interface";
   styleUrls: ["./items-list.component.scss"],
 })
 export class ItemsListComponent {
-  @Input() items!: Item[];
+  @Input() items: Item[] = [];
 }

@@ -3,7 +3,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 
 import { ItemCardComponent } from "./item-card.component";
 import { Component, Input } from "@angular/core";
-import { Item } from "../model/item.interface";
+import { Item } from "../../../model/item.interface";
 
 @Component({
   selector: "app-story-item-card",
