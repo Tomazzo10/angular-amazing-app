@@ -1,3 +1,7 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
+
 .SliderContainer {
     p {
         color: #455D63; 
@@ -39,7 +43,7 @@
         height: 16px;
         width: 16px;
         border-radius: 8px;
-        background: #13C1AC;
+        background: $greenWalla;
         -webkit-appearance: none;
         margin-top: -4px;
         cursor: pointer;
