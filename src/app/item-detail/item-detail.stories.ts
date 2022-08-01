@@ -1,5 +1,6 @@
 import { Meta, Story } from "@storybook/angular";
 import { moduleMetadata } from "@storybook/angular";
+import { CommonModule } from "@angular/common";
 
 import { ItemDetailComponent } from "./item-detail.component";
 
@@ -9,7 +10,7 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [ItemDetailComponent],
-      imports: [],
+      imports: [CommonModule],
     }),
   ],
 } as Meta;
