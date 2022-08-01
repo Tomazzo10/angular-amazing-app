@@ -1,4 +1,6 @@
-$greenWalla: #13C1AC;
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
 
 .SearchBar {
     display: flex;
