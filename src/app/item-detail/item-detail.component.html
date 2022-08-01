@@ -3,16 +3,24 @@
   <div class="d-flex flex-column">
     <img class="align-self-center" width="304" src="{{ item.image }}" />
     <div class="position-absolute">
-      <button class="__icon" *ngIf="item.favorited" (click)="removeFavorite()">
+      <button
+        class="ItemDetail__icon"
+        *ngIf="item.favorited"
+        (click)="removeFavorite()"
+      >
         <img src="../../assets/item-card/heart-full.svg" />
       </button>
-      <button class="__icon" *ngIf="!item.favorited" (click)="addFavorite()">
+      <button
+        class="ItemDetail__icon"
+        *ngIf="!item.favorited"
+        (click)="addFavorite()"
+      >
         <img src="../../assets/item-card/heart-empty.svg" />
       </button>
     </div>
   </div>
-  <div class="d-flex flex-column">
+  <div class="ItemDetail__text d-flex flex-column align-self-end">
     <p>{{ item.description }}</p>
-    <p>{{ item.price.amount }}</p>
+    <p>{{ item.price.amount | currency: item.price.currency }}</p>
   </div>
 </div>
