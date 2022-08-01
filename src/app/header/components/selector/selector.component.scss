@@ -1,19 +1,24 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
+
 .options {
     inset: 0px 0px auto 0px !important;
 }
 .btn {
-    outline: 2px solid #13C1AC;
+    border: 2px solid $greenWalla;
+    border-radius: 8px;
     color: #455D63;
     &:hover{
         color:white;
-        background-color: #13C1AC;
+        background-color: $greenWalla;
     }
 }
 .active {
-    background-color: #13C1AC !important;
+    background-color: $greenWalla !important;
 }
 .selected {
     &:active {
-        background-color: #13C1AC !important;
+        background-color: $greenWalla !important;
     }
 }
