@@ -8,7 +8,7 @@
       <p>{{ itemData.description }}</p>
       <div class="ItemCard__price-fav d-flex flex-row justify-content-between">
         <h5>
-          {{ itemData.price?.amount | currency: itemData.price?.currency }}
+          {{ itemData.price.amount | currency: itemData.price.currency }}
         </h5>
         <button
           *ngIf="itemData.favorited"
